@@ -19,13 +19,13 @@
   <section class="section cream">
     <div class="wrap">
       @if($articles->count() > 0)
-        <div class="news-grid">
+        <div class="news-grid reveal">
           @foreach($articles as $article)
           <article class="news-card">
             <div class="img-frame radius-c">
               <span class="img-frame__label">Photo à ajouter<br><code>{{ $article->cover_image ? 'storage/'.$article->cover_image : 'articles/'.$article->slug.'.jpg' }}</code></span>
               @if($article->cover_image_url)
-                <img src="{{ $article->cover_image_url }}" alt="{{ $article->title }}" loading="lazy" onerror="this.style.display='none'">
+                <img src="{{ $article->cover_image_url }}" alt="{{ $article->title }}" loading="lazy" decoding="async" onerror="this.style.display='none'">
               @endif
             </div>
             <span class="news-date">{{ $article->published_at ? $article->published_at->translatedFormat('d F Y') : 'Date à préciser' }}</span>

@@ -21,7 +21,7 @@
       <div class="img-frame">
         <span class="img-frame__label">Photo à ajouter<br><code>{{ $article->cover_image ? 'storage/'.$article->cover_image : 'articles/'.$article->slug.'.jpg' }}</code></span>
         @if($article->cover_image_url)
-          <img src="{{ $article->cover_image_url }}" alt="{{ $article->title }}" loading="lazy" onerror="this.style.display='none'">
+          <img src="{{ $article->cover_image_url }}" alt="{{ $article->title }}" loading="lazy" decoding="async" onerror="this.style.display='none'">
         @endif
       </div>
     </div>
@@ -40,7 +40,7 @@
 
   <!-- ============ CTA FINALE ============ -->
   <section class="section dark cta-band">
-    <div class="wrap">
+    <div class="wrap reveal">
       <h2>Intéressé par une formation au CFTP-MA ?</h2>
       <p>Consultez les conditions d'admission ou contactez nos conseillers sur WhatsApp pour toute question.</p>
       <div class="cta-band-actions">

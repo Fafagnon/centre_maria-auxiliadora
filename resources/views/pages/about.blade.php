@@ -24,11 +24,11 @@
   <!-- ============ HISTOIRE / TIMELINE ============ -->
   <section class="section cream">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="kicker">Notre histoire</span>
         <h2 class="section-title">Trois décennies au service des jeunes</h2>
       </div>
-      <div class="timeline">
+      <div class="timeline reveal reveal-delay-1">
         <div class="tl-item">
           <div class="tl-year">19 septembre 1989</div>
           <p>Création du Centre d'Apprentissage Maria Auxiliadora (CAMA) à Akodésséwa, à l'initiative des Salésiens de Don Bosco au Togo, avec l'appui de la coopération allemande.</p>
@@ -48,11 +48,11 @@
   <!-- ============ MISSION & VALEURS ============ -->
   <section class="section">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="kicker">Notre mission</span>
         <h2 class="section-title">Ce qui guide notre pédagogie</h2>
       </div>
-      <div class="values-grid">
+      <div class="values-grid reveal reveal-delay-1">
         <div class="value-row">
           <span class="value-idx">01</span>
           <h3>Apprendre en faisant</h3>
@@ -79,7 +79,7 @@
 
   <!-- ============ PÉDAGOGIE ============ -->
   <section class="section cream">
-    <div class="wrap ped-grid">
+    <div class="wrap ped-grid reveal">
       <div class="ped-text">
         <span class="kicker">Notre pédagogie</span>
         <h2 class="section-title">Une formation concrète, encadrée de près</h2>
@@ -89,7 +89,7 @@
       <div class="ped-figure">
         <div class="img-frame radius-b">
           <span class="img-frame__label">Photo à ajouter<br><code>images/pedagogie-atelier.jpg</code></span>
-          <img src="{{ asset('images/pedagogie-atelier.jpg') }}" alt="Formateur et apprenants en atelier" loading="lazy" onerror="this.style.display='none'">
+          <img src="{{ asset('images/pedagogie-atelier.jpg') }}" alt="Formateur et apprenants en atelier" loading="lazy" decoding="async" onerror="this.style.display='none'">
         </div>
       </div>
     </div>
@@ -98,28 +98,28 @@
   <!-- ============ ÉQUIPE ============ -->
   <section class="section">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="kicker">L'équipe</span>
         <h2 class="section-title">Encadrement pédagogique</h2>
       </div>
-      <div class="team-grid">
+      <div class="team-grid reveal reveal-delay-1">
         <div class="team-card">
-          <div class="img-frame"><span class="img-frame__label">Photo à ajouter<br><code>images/equipe-direction.jpg</code></span><img src="{{ asset('images/equipe-direction.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="img-frame"><span class="img-frame__label">Photo à ajouter<br><code>images/equipe-direction.jpg</code></span><img src="{{ asset('images/equipe-direction.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
           <h3>Direction du centre</h3>
           <span class="role">À compléter</span>
         </div>
         <div class="team-card">
-          <div class="img-frame"><span class="img-frame__label">Photo à ajouter<br><code>images/equipe-pedagogie.jpg</code></span><img src="{{ asset('images/equipe-pedagogie.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="img-frame"><span class="img-frame__label">Photo à ajouter<br><code>images/equipe-pedagogie.jpg</code></span><img src="{{ asset('images/equipe-pedagogie.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
           <h3>Responsable pédagogique</h3>
           <span class="role">À compléter</span>
         </div>
         <div class="team-card">
-          <div class="img-frame"><span class="img-frame__label">Photo à ajouter<br><code>images/equipe-ateliers.jpg</code></span><img src="{{ asset('images/equipe-ateliers.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="img-frame"><span class="img-frame__label">Photo à ajouter<br><code>images/equipe-ateliers.jpg</code></span><img src="{{ asset('images/equipe-ateliers.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
           <h3>Chefs d'atelier</h3>
           <span class="role">À compléter</span>
         </div>
         <div class="team-card">
-          <div class="img-frame"><span class="img-frame__label">Photo à ajouter<br><code>images/equipe-secretariat.jpg</code></span><img src="{{ asset('images/equipe-secretariat.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="img-frame"><span class="img-frame__label">Photo à ajouter<br><code>images/equipe-secretariat.jpg</code></span><img src="{{ asset('images/equipe-secretariat.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
           <h3>Secrétariat</h3>
           <span class="role">À compléter</span>
         </div>
@@ -131,19 +131,19 @@
   <!-- ============ INFRASTRUCTURES ============ -->
   <section class="section cream">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="kicker">Le centre</span>
         <h2 class="section-title">Des ateliers pensés pour la pratique</h2>
       </div>
-      <div class="fac-grid">
+      <div class="fac-grid reveal reveal-delay-1">
         <div class="fac-item">
-          <div class="img-frame radius-a"><span class="img-frame__label">Photo à ajouter<br><code>images/infra-1.jpg</code></span><img src="{{ asset('images/infra-1.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="img-frame radius-a"><span class="img-frame__label">Photo à ajouter<br><code>images/infra-1.jpg</code></span><img src="{{ asset('images/infra-1.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
         </div>
         <div class="fac-item">
-          <div class="img-frame radius-c"><span class="img-frame__label">Photo à ajouter<br><code>images/infra-2.jpg</code></span><img src="{{ asset('images/infra-2.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="img-frame radius-c"><span class="img-frame__label">Photo à ajouter<br><code>images/infra-2.jpg</code></span><img src="{{ asset('images/infra-2.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
         </div>
         <div class="fac-item">
-          <div class="img-frame radius-c"><span class="img-frame__label">Photo à ajouter<br><code>images/infra-3.jpg</code></span><img src="{{ asset('images/infra-3.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="img-frame radius-c"><span class="img-frame__label">Photo à ajouter<br><code>images/infra-3.jpg</code></span><img src="{{ asset('images/infra-3.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div>
         </div>
       </div>
     </div>
@@ -151,7 +151,7 @@
 
   <!-- ============ CTA FINALE ============ -->
   <section class="section dark cta-band">
-    <div class="wrap">
+    <div class="wrap reveal">
       <h2>Envie de rejoindre le CFTP-MA ?</h2>
       <p>Découvrez les conditions d'admission et les étapes pour déposer votre candidature.</p>
       <div class="cta-band-actions">

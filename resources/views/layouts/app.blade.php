@@ -6,9 +6,8 @@
   <title>@yield('title', 'CFTP-MA — Centre de Formation Technique et Professionnelle Maria Auxiliadora | Lomé')</title>
   <meta name="description" content="@yield('meta_description', 'Le CFTP-MA forme depuis 1989 les jeunes de 16 à 25 ans à Lomé aux métiers techniques : électricité, construction métallique, informatique, esthétique et plus. Diplômes CAP et BT reconnus par l\'État.')">
   <link rel="icon" type="image/png" href="{{ asset('favicon.png') }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="{{ asset('fonts/oswald-latin.woff2') }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ asset('fonts/worksans-latin.woff2') }}" as="font" type="font/woff2" crossorigin>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
   @stack('styles')
 </head>

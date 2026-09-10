@@ -19,7 +19,7 @@
       <div class="page-hero-figure">
         <div class="img-frame radius-a">
           <span class="img-frame__label">Photo à ajouter<br><code>images/admissions-hero.jpg</code></span>
-          <img src="{{ asset('images/admissions-hero.jpg') }}" alt="Accueil des candidats au CFTP-MA" loading="lazy" onerror="this.style.display='none'">
+          <img src="{{ asset('images/admissions-hero.jpg') }}" alt="Accueil des candidats au CFTP-MA" loading="lazy" decoding="async" onerror="this.style.display='none'">
         </div>
       </div>
     </div>
@@ -28,11 +28,11 @@
   <!-- ============ CONDITIONS ============ -->
   <section class="section cream">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="kicker">Conditions d'admission</span>
         <h2 class="section-title">Qui peut candidater ?</h2>
       </div>
-      <div class="cond-grid">
+      <div class="cond-grid reveal reveal-delay-1">
         <div class="cond-card">
           <span class="tag">Cycle long</span>
           <h3>Électricité, construction métallique, électrotechnique, maintenance informatique</h3>
@@ -61,11 +61,11 @@
   <!-- ============ ÉTAPES ============ -->
   <section class="section">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="kicker">Le processus</span>
         <h2 class="section-title">Comment candidater</h2>
       </div>
-      <div class="steps-list">
+      <div class="steps-list reveal reveal-delay-1">
         <div class="step-item">
           <div class="step-num">1</div>
           <h3>Prendre contact</h3>
@@ -93,11 +93,11 @@
   <!-- ============ DOCUMENTS ============ -->
   <section class="section cream">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="kicker">Pièces à fournir</span>
         <h2 class="section-title">Constituer votre dossier</h2>
       </div>
-      <div class="doc-list">
+      <div class="doc-list reveal reveal-delay-1">
         <div class="doc-item">
           <span class="doc-check"><svg viewBox="0 0 24 24"><polyline points="4,13 9,18 20,6"/></svg></span>
           <span>Acte de naissance ou extrait récent</span>
@@ -130,11 +130,11 @@
   <!-- ============ FAQ ============ -->
   <section class="section">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="kicker">Questions fréquentes</span>
         <h2 class="section-title">Avant de candidater</h2>
       </div>
-      <div class="faq-list">
+      <div class="faq-list reveal reveal-delay-1">
         <div class="faq-item is-open">
           <button class="faq-q" type="button"><span>Combien coûte la formation ?</span><span class="plus"></span></button>
           <div class="faq-a"><p>Les frais varient selon la filière et le cycle choisi. Contactez le centre par WhatsApp ou téléphone pour connaître le détail applicable à votre situation.</p></div>
@@ -157,7 +157,7 @@
 
   <!-- ============ CTA FINALE ============ -->
   <section class="section dark cta-band">
-    <div class="wrap">
+    <div class="wrap reveal">
       <h2>Prêt à commencer votre formation ?</h2>
       <p>Écrivez-nous dès maintenant sur WhatsApp pour être accompagné dans votre candidature, ou appelez directement le secrétariat du centre.</p>
       <div class="cta-band-actions">

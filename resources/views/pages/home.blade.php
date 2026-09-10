@@ -19,7 +19,7 @@
       <div class="hero-figure">
         <div class="img-frame radius-a">
           <span class="img-frame__label">Photo à ajouter<br><code>images/hero-apprenants.jpg</code></span>
-          <img src="{{ asset('images/hero-apprenants.jpg') }}" alt="Apprenants du CFTP-MA en atelier" loading="lazy" onerror="this.style.display='none'">
+          <img src="{{ asset('images/hero-apprenants.jpg') }}" alt="Apprenants du CFTP-MA en atelier" fetchpriority="high" decoding="async" onerror="this.style.display='none'">
         </div>
       </div>
     </div>
@@ -27,11 +27,11 @@
 
   <!-- ============ NOTRE HISTOIRE ============ -->
   <section class="section">
-    <div class="wrap histoire-grid">
+    <div class="wrap histoire-grid reveal">
       <div class="histoire-figure">
         <div class="img-frame radius-b">
           <span class="img-frame__label">Photo à ajouter<br><code>images/histoire-atelier.jpg</code></span>
-          <img src="{{ asset('images/histoire-atelier.jpg') }}" alt="Atelier de formation au CFTP-MA" loading="lazy" onerror="this.style.display='none'">
+          <img src="{{ asset('images/histoire-atelier.jpg') }}" alt="Atelier de formation au CFTP-MA" loading="lazy" decoding="async" onerror="this.style.display='none'">
         </div>
       </div>
       <div class="histoire-text">
@@ -46,11 +46,11 @@
   <!-- ============ POURQUOI NOUS ============ -->
   <section class="section dark">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="kicker on-dark">Pourquoi le CFTP-MA</span>
         <h2 class="section-title">Une formation pratique, reconnue par l'État</h2>
       </div>
-      <div class="stats-grid">
+      <div class="stats-grid reveal">
         <div class="stat"><span class="num">1500+</span><span class="lbl">Jeunes formés depuis 1989</span></div>
         <div class="stat"><span class="num">1200+</span><span class="lbl">Diplômés en emploi</span></div>
         <div class="stat"><span class="num">50+</span><span class="lbl">Entreprises partenaires</span></div>
@@ -64,18 +64,18 @@
   <!-- ============ FORMATIONS ============ -->
   <section class="section cream" id="formations">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="kicker">Nos formations</span>
         <h2 class="section-title">Parcours de formation au CFTP-MA</h2>
       </div>
 
-      <div class="cycle-toggle" role="tablist" aria-label="Cycle de formation">
+      <div class="cycle-toggle reveal reveal-delay-1" role="tablist" aria-label="Cycle de formation">
         <button class="toggle-btn is-active" data-cycle="long" role="tab" aria-selected="true">Cycle long</button>
         <button class="toggle-btn" data-cycle="court" role="tab" aria-selected="false">Cycle court</button>
       </div>
 
       <!-- Cycle long : tabs -->
-      <div class="filiere-nav" data-cycle-group="long">
+      <div class="filiere-nav reveal reveal-delay-2" data-cycle-group="long">
         <div class="filiere-track">
           <button class="filiere-tab is-active" data-target="p-elec-equip">Électricité d'équipement</button>
           <button class="filiere-tab" data-target="p-construction">Construction métallique</button>
@@ -86,7 +86,7 @@
       </div>
 
       <!-- Cycle court : tabs -->
-      <div class="filiere-nav" data-cycle-group="court" hidden>
+      <div class="filiere-nav reveal reveal-delay-2" data-cycle-group="court" hidden>
         <div class="filiere-track">
           <button class="filiere-tab is-active" data-target="p-esthetique">Esthétique</button>
           <button class="filiere-tab" data-target="p-decoration">Décoration d'intérieur</button>
@@ -97,11 +97,11 @@
       </div>
 
       <!-- Cycle long : panels -->
-      <div class="filiere-panels" data-cycle-group="long">
+      <div class="filiere-panels reveal reveal-delay-3" data-cycle-group="long">
         <article class="filiere-panel is-active" id="p-elec-equip">
           <div class="img-frame radius-c">
             <span class="img-frame__label">Photo à ajouter<br><code>images/filiere-elec-equip.jpg</code></span>
-            <img src="{{ asset('images/filiere-elec-equip.jpg') }}" alt="Filière Électricité d'équipement" loading="lazy" onerror="this.style.display='none'">
+            <img src="{{ asset('images/filiere-elec-equip.jpg') }}" alt="Filière Électricité d'équipement" loading="lazy" decoding="async" onerror="this.style.display='none'">
           </div>
           <div>
             <div class="filiere-meta"><span class="tag">CAP</span><span class="tag">3 ans + stage</span></div>
@@ -113,7 +113,7 @@
         <article class="filiere-panel" id="p-construction">
           <div class="img-frame radius-c">
             <span class="img-frame__label">Photo à ajouter<br><code>images/filiere-construction.jpg</code></span>
-            <img src="{{ asset('images/filiere-construction.jpg') }}" alt="Filière Construction métallique" loading="lazy" onerror="this.style.display='none'">
+            <img src="{{ asset('images/filiere-construction.jpg') }}" alt="Filière Construction métallique" loading="lazy" decoding="async" onerror="this.style.display='none'">
           </div>
           <div>
             <div class="filiere-meta"><span class="tag">CAP</span><span class="tag">3 ans + stage</span></div>
@@ -125,7 +125,7 @@
         <article class="filiere-panel" id="p-electrotechnique">
           <div class="img-frame radius-c">
             <span class="img-frame__label">Photo à ajouter<br><code>images/filiere-electrotechnique.jpg</code></span>
-            <img src="{{ asset('images/filiere-electrotechnique.jpg') }}" alt="Filière Électrotechnique" loading="lazy" onerror="this.style.display='none'">
+            <img src="{{ asset('images/filiere-electrotechnique.jpg') }}" alt="Filière Électrotechnique" loading="lazy" decoding="async" onerror="this.style.display='none'">
           </div>
           <div>
             <div class="filiere-meta"><span class="tag">BT</span><span class="tag">3 ans + stage</span></div>
@@ -137,7 +137,7 @@
         <article class="filiere-panel" id="p-maintenance">
           <div class="img-frame radius-c">
             <span class="img-frame__label">Photo à ajouter<br><code>images/filiere-maintenance.jpg</code></span>
-            <img src="{{ asset('images/filiere-maintenance.jpg') }}" alt="Filière Maintenance informatique et réseau" loading="lazy" onerror="this.style.display='none'">
+            <img src="{{ asset('images/filiere-maintenance.jpg') }}" alt="Filière Maintenance informatique et réseau" loading="lazy" decoding="async" onerror="this.style.display='none'">
           </div>
           <div>
             <div class="filiere-meta"><span class="tag">BT</span><span class="tag">3 ans + stage</span></div>
@@ -148,11 +148,11 @@
       </div>
 
       <!-- Cycle court : panels -->
-      <div class="filiere-panels" data-cycle-group="court" hidden>
+      <div class="filiere-panels reveal reveal-delay-3" data-cycle-group="court" hidden>
         <article class="filiere-panel is-active" id="p-esthetique">
           <div class="img-frame radius-c">
             <span class="img-frame__label">Photo à ajouter<br><code>images/filiere-esthetique.jpg</code></span>
-            <img src="{{ asset('images/filiere-esthetique.jpg') }}" alt="Filière Esthétique" loading="lazy" onerror="this.style.display='none'">
+            <img src="{{ asset('images/filiere-esthetique.jpg') }}" alt="Filière Esthétique" loading="lazy" decoding="async" onerror="this.style.display='none'">
           </div>
           <div>
             <div class="filiere-meta"><span class="tag">Modulaire</span><span class="tag">6 mois + stage</span></div>
@@ -164,7 +164,7 @@
         <article class="filiere-panel" id="p-decoration">
           <div class="img-frame radius-c">
             <span class="img-frame__label">Photo à ajouter<br><code>images/filiere-decoration.jpg</code></span>
-            <img src="{{ asset('images/filiere-decoration.jpg') }}" alt="Filière Décoration d'intérieur" loading="lazy" onerror="this.style.display='none'">
+            <img src="{{ asset('images/filiere-decoration.jpg') }}" alt="Filière Décoration d'intérieur" loading="lazy" decoding="async" onerror="this.style.display='none'">
           </div>
           <div>
             <div class="filiere-meta"><span class="tag">Modulaire</span><span class="tag">6 mois + stage</span></div>
@@ -176,7 +176,7 @@
         <article class="filiere-panel" id="p-secretariat">
           <div class="img-frame radius-c">
             <span class="img-frame__label">Photo à ajouter<br><code>images/filiere-secretariat.jpg</code></span>
-            <img src="{{ asset('images/filiere-secretariat.jpg') }}" alt="Filière Secrétariat bureautique" loading="lazy" onerror="this.style.display='none'">
+            <img src="{{ asset('images/filiere-secretariat.jpg') }}" alt="Filière Secrétariat bureautique" loading="lazy" decoding="async" onerror="this.style.display='none'">
           </div>
           <div>
             <div class="filiere-meta"><span class="tag">Modulaire</span><span class="tag">6 mois + stage</span></div>
@@ -188,7 +188,7 @@
         <article class="filiere-panel" id="p-informatique">
           <div class="img-frame radius-c">
             <span class="img-frame__label">Photo à ajouter<br><code>images/filiere-informatique.jpg</code></span>
-            <img src="{{ asset('images/filiere-informatique.jpg') }}" alt="Filière Initiation à l'informatique" loading="lazy" onerror="this.style.display='none'">
+            <img src="{{ asset('images/filiere-informatique.jpg') }}" alt="Filière Initiation à l'informatique" loading="lazy" decoding="async" onerror="this.style.display='none'">
           </div>
           <div>
             <div class="filiere-meta"><span class="tag">Modulaire</span><span class="tag">6 mois + stage</span></div>
@@ -203,17 +203,17 @@
   <!-- ============ PARTENAIRES ============ -->
   <section class="section">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="kicker">Nos partenaires</span>
         <h2 class="section-title">Ils accompagnent le CFTP-MA</h2>
       </div>
-      <div class="partners-row">
-        <div class="partner-slot"><div class="img-frame"><span class="img-frame__label">Logo à ajouter<br><code>images/partenaire-1.png</code></span><img src="{{ asset('images/partenaire-1.png') }}" alt="Partenaire du CFTP-MA" loading="lazy" onerror="this.style.display='none'"></div></div>
-        <div class="partner-slot"><div class="img-frame"><span class="img-frame__label">Logo à ajouter<br><code>images/partenaire-2.png</code></span><img src="{{ asset('images/partenaire-2.png') }}" alt="Partenaire du CFTP-MA" loading="lazy" onerror="this.style.display='none'"></div></div>
-        <div class="partner-slot"><div class="img-frame"><span class="img-frame__label">Logo à ajouter<br><code>images/partenaire-3.png</code></span><img src="{{ asset('images/partenaire-3.png') }}" alt="Partenaire du CFTP-MA" loading="lazy" onerror="this.style.display='none'"></div></div>
-        <div class="partner-slot"><div class="img-frame"><span class="img-frame__label">Logo à ajouter<br><code>images/partenaire-4.png</code></span><img src="{{ asset('images/partenaire-4.png') }}" alt="Partenaire du CFTP-MA" loading="lazy" onerror="this.style.display='none'"></div></div>
-        <div class="partner-slot"><div class="img-frame"><span class="img-frame__label">Logo à ajouter<br><code>images/partenaire-5.png</code></span><img src="{{ asset('images/partenaire-5.png') }}" alt="Partenaire du CFTP-MA" loading="lazy" onerror="this.style.display='none'"></div></div>
-        <div class="partner-slot"><div class="img-frame"><span class="img-frame__label">Logo à ajouter<br><code>images/partenaire-6.png</code></span><img src="{{ asset('images/partenaire-6.png') }}" alt="Partenaire du CFTP-MA" loading="lazy" onerror="this.style.display='none'"></div></div>
+      <div class="partners-row reveal reveal-delay-1">
+        <div class="partner-slot"><div class="img-frame"><span class="img-frame__label">Logo à ajouter<br><code>images/partenaire-1.png</code></span><img src="{{ asset('images/partenaire-1.png') }}" alt="Partenaire du CFTP-MA" loading="lazy" decoding="async" onerror="this.style.display='none'"></div></div>
+        <div class="partner-slot"><div class="img-frame"><span class="img-frame__label">Logo à ajouter<br><code>images/partenaire-2.png</code></span><img src="{{ asset('images/partenaire-2.png') }}" alt="Partenaire du CFTP-MA" loading="lazy" decoding="async" onerror="this.style.display='none'"></div></div>
+        <div class="partner-slot"><div class="img-frame"><span class="img-frame__label">Logo à ajouter<br><code>images/partenaire-3.png</code></span><img src="{{ asset('images/partenaire-3.png') }}" alt="Partenaire du CFTP-MA" loading="lazy" decoding="async" onerror="this.style.display='none'"></div></div>
+        <div class="partner-slot"><div class="img-frame"><span class="img-frame__label">Logo à ajouter<br><code>images/partenaire-4.png</code></span><img src="{{ asset('images/partenaire-4.png') }}" alt="Partenaire du CFTP-MA" loading="lazy" decoding="async" onerror="this.style.display='none'"></div></div>
+        <div class="partner-slot"><div class="img-frame"><span class="img-frame__label">Logo à ajouter<br><code>images/partenaire-5.png</code></span><img src="{{ asset('images/partenaire-5.png') }}" alt="Partenaire du CFTP-MA" loading="lazy" decoding="async" onerror="this.style.display='none'"></div></div>
+        <div class="partner-slot"><div class="img-frame"><span class="img-frame__label">Logo à ajouter<br><code>images/partenaire-6.png</code></span><img src="{{ asset('images/partenaire-6.png') }}" alt="Partenaire du CFTP-MA" loading="lazy" decoding="async" onerror="this.style.display='none'"></div></div>
       </div>
     </div>
   </section>
@@ -221,16 +221,16 @@
   <!-- ============ ENSEMBLE (arc + CTA) ============ -->
   <section class="section dark ensemble">
     <div class="wrap">
-      <div class="arc">
-        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-1.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div></div>
-        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-2.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div></div>
-        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-3.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div></div>
-        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-4.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div></div>
-        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-5.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div></div>
-        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-6.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div></div>
-        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-7.jpg') }}" alt="" loading="lazy" onerror="this.style.display='none'"></div></div>
+      <div class="arc reveal">
+        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-1.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div></div>
+        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-2.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div></div>
+        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-3.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div></div>
+        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-4.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div></div>
+        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-5.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div></div>
+        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-6.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div></div>
+        <div class="arc-item"><div class="img-frame"><img src="{{ asset('images/ensemble-7.jpg') }}" alt="" loading="lazy" decoding="async" onerror="this.style.display='none'"></div></div>
       </div>
-      <div class="ensemble-content">
+      <div class="ensemble-content reveal reveal-delay-2">
         <h2>Construisons ensemble l'avenir de nos jeunes</h2>
         <p>Parents, entreprises, formateurs : la réussite d'un apprenant se construit à plusieurs. Rejoignez une formation qui prépare concrètement à l'emploi.</p>
         <a class="btn btn-gold" href="https://wa.me/22893007790?text=Bonjour%2C%20je%20souhaite%20candidater%20au%20CFTP-MA" target="_blank" rel="noopener">Candidater maintenant</a>
@@ -242,17 +242,17 @@
   @if($latestArticles->count() > 0)
   <section class="section cream">
     <div class="wrap">
-      <div class="section-head">
+      <div class="section-head reveal">
         <span class="kicker">Actualités</span>
         <h2 class="section-title">Ce qui se passe au centre</h2>
       </div>
-      <div class="news-grid">
+      <div class="news-grid reveal reveal-delay-1">
         @foreach($latestArticles as $article)
         <article class="news-card">
           <div class="img-frame radius-c">
             <span class="img-frame__label">Photo à ajouter<br><code>{{ $article->cover_image ? 'storage/'.$article->cover_image : 'articles/'.$article->slug.'.jpg' }}</code></span>
             @if($article->cover_image_url)
-              <img src="{{ $article->cover_image_url }}" alt="{{ $article->title }}" loading="lazy" onerror="this.style.display='none'">
+              <img src="{{ $article->cover_image_url }}" alt="{{ $article->title }}" loading="lazy" decoding="async" onerror="this.style.display='none'">
             @endif
           </div>
           <span class="news-date">{{ $article->published_at ? $article->published_at->translatedFormat('d F Y') : 'Date à préciser' }}</span>

@@ -1,3 +1,37 @@
+/* ============ SELF-HOSTED FONTS (Zero external network latency) ============ */
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('/fonts/oswald-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Oswald';
+  font-style: normal;
+  font-weight: 500 700;
+  font-display: swap;
+  src: url('/fonts/oswald-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/worksans-latin.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/worksans-latin-ext.woff2') format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
 :root {
   --navy: #173355;
   --navy-dark: #0E1E33;
@@ -1057,8 +1091,161 @@ footer ul li a:hover { color: var(--gold); }
   border-top: 1px solid var(--line);
 }
 
+/* ============ GPU-ACCELERATED ANIMATIONS & MICRO-INTERACTIONS ============ */
+
+/* Sticky Header on Scroll */
+.site-header {
+  transition: background 0.35s ease, box-shadow 0.35s ease, backdrop-filter 0.35s ease, border-color 0.35s ease;
+}
+.site-header.is-scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 4px 24px rgba(14, 30, 51, 0.08);
+  border-bottom-color: rgba(23, 51, 85, 0.08);
+}
+
+/* Hero Staggered Entrance */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-text .kicker {
+  animation: heroFadeUp 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.hero-text h1 {
+  animation: heroFadeUp 0.65s 0.12s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-text .lead {
+  animation: heroFadeUp 0.65s 0.22s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-text .hero-ctas {
+  animation: heroFadeUp 0.65s 0.32s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-figure {
+  animation: heroFadeUp 0.85s 0.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Scroll-triggered Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Buttons tactile feedback */
+.btn {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  will-change: transform;
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn-primary:hover {
+  box-shadow: 0 8px 20px rgba(23, 51, 85, 0.28);
+}
+.btn-gold:hover {
+  box-shadow: 0 8px 22px rgba(201, 154, 75, 0.38);
+}
+.btn-outline:hover {
+  box-shadow: 0 6px 16px rgba(23, 51, 85, 0.12);
+}
+.btn:active {
+  transform: scale(0.97) translateY(0);
+}
+
+/* News Cards & Hover */
+.news-card {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  will-change: transform;
+}
+.news-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(23, 51, 85, 0.08);
+}
+.news-card .img-frame img {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.news-card:hover .img-frame img {
+  transform: scale(1.04);
+}
+.news-card .read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+.news-card .read-more::after {
+  content: '→';
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+.news-card:hover .read-more::after {
+  transform: translateX(4px);
+}
+
+/* Gallery items hover */
+.gallery-item {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  will-change: transform;
+}
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(14, 30, 51, 0.14);
+}
+.gallery-item img {
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+/* Stats counter smooth appearance */
+.stat .num {
+  font-variant-numeric: tabular-nums;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.stat:hover .num {
+  transform: scale(1.05);
+}
+
+/* FAQ Accordion Transitions */
+.faq-item {
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+.faq-icon {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.faq-item.is-open .faq-icon {
+  transform: rotate(180deg);
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  * { transition-duration: 0.001ms !important; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
 }
 

@@ -42,7 +42,7 @@
           <div class="img-frame">
             <span class="img-frame__label">Photo à ajouter<br><code>{{ $photo->image_path ? 'storage/'.$photo->image_path : 'gallery/photo-'.$photo->id.'.jpg' }}</code></span>
             @if($photo->image_url)
-              <img src="{{ $photo->image_url }}" alt="{{ $photo->caption ?? '' }}" loading="lazy" onerror="this.style.display='none'">
+              <img src="{{ $photo->image_url }}" alt="{{ $photo->caption ?? '' }}" loading="lazy" decoding="async" onerror="this.style.display='none'">
             @endif
           </div>
         </figure>
