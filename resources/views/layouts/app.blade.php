@@ -29,20 +29,7 @@
       <a href="{{ route('gallery') }}" class="{{ request()->routeIs('gallery') ? 'is-active' : '' }}">Galerie</a>
       <a href="{{ route('articles.index') }}" class="{{ request()->routeIs('articles.*') ? 'is-active' : '' }}">Actualités</a>
       <a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'is-active' : '' }}">Contact</a>
-      @auth
-        <a href="{{ url('/admin') }}" style="color:var(--gold);font-weight:600;display:inline-flex;align-items:center;gap:4px;" title="Accéder au panneau d'administration">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-          Admin
-        </a>
-      @endauth
     </nav>
-
-    @auth
-      <a class="btn btn-outline nav-cta" href="{{ url('/admin') }}" style="border-color:var(--gold);color:var(--gold);" title="Panneau d'administration">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:4px;"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-        Admin
-      </a>
-    @endauth
 
     <a class="btn btn-primary nav-cta" href="https://wa.me/22893007790?text=Bonjour%2C%20je%20souhaite%20candidater%20au%20CFTP-MA" target="_blank" rel="noopener">Candidater</a>
 
@@ -58,9 +45,6 @@
     <a href="{{ route('gallery') }}" class="{{ request()->routeIs('gallery') ? 'is-active' : '' }}">Galerie</a>
     <a href="{{ route('articles.index') }}" class="{{ request()->routeIs('articles.*') ? 'is-active' : '' }}">Actualités</a>
     <a href="{{ route('contact') }}" class="{{ request()->routeIs('contact') ? 'is-active' : '' }}">Contact</a>
-    @auth
-      <a href="{{ url('/admin') }}" style="color:var(--gold);font-weight:600;">Espace Administration</a>
-    @endauth
     <a class="btn btn-primary" href="https://wa.me/22893007790?text=Bonjour%2C%20je%20souhaite%20candidater%20au%20CFTP-MA" target="_blank" rel="noopener">Candidater maintenant</a>
   </nav>
 </header>
@@ -124,7 +108,7 @@
       <span>© 2026 CFTP-MA — Centre de Formation Technique et Professionnelle Maria Auxiliadora</span>
       <div style="display:inline-flex;align-items:center;gap:18px;">
         <span>Site conçu pour le CFTP-MA</span>
-        <a href="{{ url('/admin') }}" style="color:inherit;opacity:0.65;text-decoration:none;display:inline-flex;align-items:center;gap:5px;font-size:0.8rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'" title="Accès espace d'administration (ou raccourci Alt + A)">
+        <a href="{{ url('/admin') }}" style="color:inherit;opacity:0.65;text-decoration:none;display:inline-flex;align-items:center;gap:5px;font-size:0.8rem;transition:opacity 0.2s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0.65'" title="Espace d'administration">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
           Administration
         </a>
@@ -132,15 +116,6 @@
     </div>
   </div>
 </footer>
-
-<script>
-  // Raccourci d'accès direct pour l'administrateur : Alt + A
-  document.addEventListener('keydown', function(e) {
-    if (e.altKey && (e.key === 'a' || e.key === 'A')) {
-      window.location.href = "{{ url('/admin') }}";
-    }
-  });
-</script>
 
 @stack('scripts')
 
